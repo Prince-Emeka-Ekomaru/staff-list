@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "staff-list"
+    }
+  },
+  "defaultProject": "staff-list",
+  "cli": {
+    "analytics": false
+  }
 }

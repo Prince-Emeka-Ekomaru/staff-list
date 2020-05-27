@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Staff } from '../staff/staff';
-import { STAFF } from '../staff/mock-staff';
+import { StaffService } from '../staff.service';
 
 @Component({
   selector: 'app-staff',
@@ -8,7 +8,7 @@ import { STAFF } from '../staff/mock-staff';
   styleUrls: ['./staff.component.css']
 })
 export class StaffComponent implements OnInit {
-  staff: Staff = {
+  staffs: Staff = {
     id: 1,
     name: 'Ayo',
     role: 'Director'
@@ -19,10 +19,16 @@ export class StaffComponent implements OnInit {
   this.selectedStaff = staff;
 }
 
-  Staff = STAFF;
-  constructor() { }
+getStaff(): void {
+  this.staff = this.staffService.getStaff();
+}
+
+  staff : Staff[];
+
+  constructor(private staffService: StaffService) { }
 
   ngOnInit() {
+    this.getStaff()
   }
 
 }

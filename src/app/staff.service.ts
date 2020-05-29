@@ -13,15 +13,16 @@ export class StaffService {
 
   constructor(private messageService: MessageService) { }
 
-  getStaff(): Observable<Staff[]> {
-// TODO: send the message _after_ fetching the staff
-this.messageService.add('StaffService: fetched staff');
-    return of (STAFF);
+  getStaff(id: number): Observable<Staff> {
+
+    // TODO: send the message _after_ fetching the staff
+    this.messageService.add(`StaffService: fetched staff id=${id}`);
+    return of(STAFF.find(staff => staff.id === id));
   }
 
 }
-/*getHeroes(): Observable<Hero[]> {
-
-  this.messageService.add('HeroService: fetched heroes');
-  return of(HEROES);
+/*getHero(id: number): Observable<Hero> {
+  // TODO: send the message _after_ fetching the hero
+  this.messageService.add(`HeroService: fetched hero id=${id}`);
+  return of(HEROES.find(hero => hero.id === id));
 } */

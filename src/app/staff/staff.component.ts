@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Staff } from '../staff/staff';
 import { StaffService } from '../staff.service';
-import { MessageService } from '../message.service';
+
 
 @Component({
   selector: 'app-staff',
@@ -9,25 +9,27 @@ import { MessageService } from '../message.service';
   styleUrls: ['./staff.component.css']
 })
 export class StaffComponent implements OnInit {
+  constructor(private staffService: StaffService) { }
 
   selectedStaff: Staff;
-
-  onSelect(staff: Staff): void {
-  this.selectedStaff = staff;
-  this.messageService.add(`StaffService: Selected staff id=${staff.id}`);
-}
+  staff : Staff;
 
 getStaff(): void {
-  this.staffService.getStaff()
+  this.staffService.getStaff(1)
   .subscribe(staff => this.staff = staff);
 }
 
-  staff : Staff[];
 
-  constructor(private staffService: StaffService, private messageService: MessageService) { }
+getStaffList(): void {
+  this.staffService.getStaffList()
+  .subscribe(staffList => this.staff = staffList);
+}
 
-  ngOnInit() {
-    this.getStaff()
+
+
+  ngOnInit() : void {
+    this.getStaffList();
   }
 
 }
+

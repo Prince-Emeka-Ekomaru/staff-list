@@ -12,11 +12,11 @@ import { StaffService }  from '../staff.service';
 
 })
 export class StaffDetailComponent implements OnInit {
-  @Input() staff: Staff;
+  @Input() staff: Staff[];
 
   getStaff(): void {
   const id = +this.route.snapshot.paramMap.get('id');
-  this.staffService.getStaff(id)
+  this.staffService.getStaff()
   .subscribe(staff => this.staff = staff);
   }
   constructor(

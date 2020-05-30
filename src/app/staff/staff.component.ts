@@ -9,26 +9,22 @@ import { StaffService } from '../staff.service';
   styleUrls: ['./staff.component.css']
 })
 export class StaffComponent implements OnInit {
-  constructor(private staffService: StaffService) { }
 
   selectedStaff: Staff;
-  staff : Staff;
+
+
 
 getStaff(): void {
-  this.staffService.getStaff(1)
+  this.staffService.getStaff()
   .subscribe(staff => this.staff = staff);
 }
 
+  staff : Staff[];
 
-getStaffList(): void {
-  this.staffService.getStaffList()
-  .subscribe(staffList => this.staff = staffList);
-}
+  constructor(private staffService: StaffService) { }
 
-
-
-  ngOnInit() : void {
-    this.getStaffList();
+  ngOnInit() {
+    this.getStaff()
   }
 
 }

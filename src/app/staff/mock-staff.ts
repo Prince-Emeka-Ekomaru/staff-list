@@ -1,6 +1,6 @@
 import { Staff } from './staff';
 
-export const STAFF: Staff[] = [
+export const StaffList: Staff[] = [
   { id: 1, name: 'Ayo', role: 'Director' },
   { id: 2, name: 'Idris', role: 'Director2' },
   { id: 3, name: 'Jumoke', role:'HR Manager' },

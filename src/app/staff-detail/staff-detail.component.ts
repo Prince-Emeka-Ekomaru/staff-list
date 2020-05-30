@@ -12,25 +12,33 @@ import { StaffService }  from '../staff.service';
 
 })
 export class StaffDetailComponent implements OnInit {
-  @Input() staff: Staff[];
+  staff: Staff;
+
+  constructor(
+    private route: ActivatedRoute,
+    private staffService: StaffService,
+    private location: Location) { }
+
+    ngOnInit(): void {
+        this.getStaff();
+    }
 
   getStaff(): void {
   const id = +this.route.snapshot.paramMap.get('id');
-  this.staffService.getStaff()
+  this.staffService.getStaffList(id)
   .subscribe(staff => this.staff = staff);
   }
-  constructor(
-  private route: ActivatedRoute,
-  private staffService: StaffService,
-  private location: Location) { }
 
-  ngOnInit(): void {
-    this.getStaff();
+  goBack(): void {
+    this.location.back();
   }
+
 
 
 }
 
+/*
 
+*/
 
 

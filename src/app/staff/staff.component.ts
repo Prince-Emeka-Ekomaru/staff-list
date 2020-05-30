@@ -10,8 +10,12 @@ import { StaffService } from '../staff.service';
 })
 export class StaffComponent implements OnInit {
 
-  selectedStaff: Staff;
+  staff: Staff[];
 
+  constructor(private staffService: StaffService) { }
+  ngOnInit() {
+      this.getStaff();
+    }
 
 
 getStaff(): void {
@@ -19,13 +23,8 @@ getStaff(): void {
   .subscribe(staff => this.staff = staff);
 }
 
-  staff : Staff[];
-
-  constructor(private staffService: StaffService) { }
-
-  ngOnInit() {
-    this.getStaff()
-  }
-
 }
 
+/*
+
+} */

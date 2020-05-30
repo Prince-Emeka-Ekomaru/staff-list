@@ -1,17 +1,26 @@
-/* staffComponent's private CSS styles */
-
+/* Staff Component's private CSS styles */
 .staff {
   margin: 0 0 2em 0;
-  list-style-type:none;
+  list-style-type: none;
   padding: 0;
-  width: 30em;
+  width: 15em;
+}
+.staff li {
+  position: relative;
+  cursor: pointer;
+  background-color: #EEE;
+  margin: .5em;
+  padding: .3em 0;
+  height: 1.6em;
+  border-radius: 4px;
 }
 
 .staff li:hover {
-  color: rgba(8, 111, 246, 0.966);
+  color: #607D8B;
   background-color: #DDD;
   left: .1em;
 }
+
 .staff a {
   color: #333;
   text-decoration: none;
@@ -20,14 +29,11 @@
   width: 250px;
 }
 
-
-.staff li:hover {
-  color: #607D8B;
-  background-color: #DDD;
-  left: .1em;
+.staff a:hover {
+  color:#607D8B;
 }
 
-.staff .badge {
+.heroes .badge {
   display: inline-block;
   font-size: small;
   color: white;
@@ -43,16 +49,3 @@
   margin-right: .8em;
   border-radius: 4px 0 0 4px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-

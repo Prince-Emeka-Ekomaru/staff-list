@@ -13,16 +13,16 @@ nav a {
   text-decoration: none;
   margin-top: 10px;
   display: inline-block;
-  background-color: #eee;
+  background-color: #0a0d88fd;
   border-radius: 4px;
 }
 nav a:visited, a:link {
-  color: #334953;
+  color: #eee;
 }
 nav a:hover {
-  color: #039be5;
-  background-color: #cfd8dc;
+  color: #eee;
+  background-color: rgb(76, 81, 151);
 }
 nav a.active {
-  color: #039be5;
+  color: #070c52;
 }

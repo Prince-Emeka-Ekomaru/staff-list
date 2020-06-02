@@ -16,13 +16,13 @@
 }
 
 .staff li:hover {
-  color: #607D8B;
-  background-color: #DDD;
+  color: #eee;
+  background-color: #1f2188fd;
   left: .1em;
 }
 
 .staff a {
-  color: #333;
+  color: #0a0d88fd;
   text-decoration: none;
   position: relative;
   display: block;
@@ -30,15 +30,15 @@
 }
 
 .staff a:hover {
-  color:#607D8B;
+  color:#eee;
 }
 
-.heroes .badge {
+.staff .badge {
   display: inline-block;
   font-size: small;
   color: white;
   padding: 0.8em 0.7em 0 0.7em;
-  background-color:#405061;
+  background-color:#101264fd;
   line-height: 1em;
   position: relative;
   left: -1px;
@@ -48,4 +48,27 @@
   text-align: right;
   margin-right: .8em;
   border-radius: 4px 0 0 4px;
+}
+
+button {
+  color: #EEE;
+  background-color: rgb(2, 10, 77);
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  cursor: hand;
+  font-family: Arial;
+}
+
+button:hover {
+  background-color: #cfd8dc;
+}
+
+button.delete {
+  position: relative;
+  left: 194px;
+  top: -32px;
+  background-color: #09092ffd !important;
+  color: white;
 }

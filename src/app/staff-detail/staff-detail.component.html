@@ -3,7 +3,7 @@
 
 <div *ngIf="staff">
 
-  <h2>{{staff.name | uppercase}} Details</h2>
+  <h2>{{staff.name }} Details</h2>
   <div><span>id: </span>{{staff.id}}</div>
   <div><span>role: </span>{{staff.role}}</div>
   <div>
@@ -11,7 +11,8 @@
       <input [(ngModel)]="staff.name" placeholder="name"/>
     </label>
   </div>
-  <button (click)="goBack()">go back</button>
+  <button (click)="goBack()">Go back</button>
+  <button (click)="save()">Save</button>
 </div>
 <!--
 

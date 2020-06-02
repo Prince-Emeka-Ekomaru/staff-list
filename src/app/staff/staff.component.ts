@@ -23,6 +23,21 @@ getStaff(): void {
   .subscribe(staff => this.staff = staff);
 }
 
+add(name: string): void {
+  name = name.trim();
+  if (!name) { return; }
+  this.staffService.addStaff({ name } as Staff)
+    .subscribe(staff => {
+      this.staff.push(staff);
+    });
+}
+
+delete(staff: Staff): void {
+  this.staff = this.staff.filter(h => h !== staff);
+  this.staffService.deleteStaff(staff).subscribe();
+}
+
+
 }
 
 /*

@@ -12,7 +12,7 @@ import { StaffService }  from '../staff.service';
 
 })
 export class StaffDetailComponent implements OnInit {
-  staff: Staff;
+  @Input() staff: Staff;
 
   constructor(
     private route: ActivatedRoute,
@@ -33,6 +33,10 @@ export class StaffDetailComponent implements OnInit {
     this.location.back();
   }
 
+  save(): void {
+    this.staffService.updateStaff(this.staff)
+      .subscribe(() => this.goBack());
+  }
 
 
 }

@@ -1,8 +1,8 @@
 /* StaffSearch private styles */
 .search-result li {
-  border-bottom: 1px solid gray;
-  border-left: 1px solid gray;
-  border-right: 1px solid gray;
+  border-bottom: 1px solid rgb(61, 55, 55);
+  border-left: 1px solid rgb(61, 55, 55);
+  border-right: 1px solid rgb(61, 55, 55);
   width: 195px;
   height: 16px;
   padding: 5px;
@@ -12,11 +12,11 @@
 }
 
 .search-result li:hover {
-  background-color: #607D8B;
+  background-color: rgb(67, 70, 235);
 }
 
 .search-result li a {
-  color: #888;
+  color: rgb(67, 70, 235);
   display: block;
   text-decoration: none;
 }
@@ -34,6 +34,6 @@
 
 
 ul.search-result {
-  margin-top: 0;
-  padding-left: 0;
+  margin-top:0;
+  padding-left:0;
 }

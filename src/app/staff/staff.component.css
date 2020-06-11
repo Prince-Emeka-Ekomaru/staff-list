@@ -1,9 +1,11 @@
 /* Staff Component's private CSS styles */
 .staff {
-  margin: 0 0 2em 0;
+  display: flex;
+  flex-direction: column;
+  margin: 3 10 10em 0;
   list-style-type: none;
   padding: 0;
-  width: 15em;
+  width: 65em;
 }
 .staff li {
   position: relative;
@@ -34,7 +36,7 @@
 }
 
 .staff .badge {
-  display: inline-block;
+ display: inline-block;
   font-size: small;
   color: white;
   padding: 0.8em 0.7em 0 0.7em;
@@ -66,9 +68,13 @@ button:hover {
 }
 
 button.delete {
-  position: relative;
-  left: 194px;
-  top: -32px;
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  right: -887px;
+  top: -55px;
   background-color: #09092ffd !important;
   color: white;
+  border-radius: 10px;
+  width: 60px;
 }

@@ -4,8 +4,13 @@
 <div *ngIf="staff">
 
   <h2>{{staff.name }} Details</h2>
-  <div><span>id: </span>{{staff.id}}</div>
-  <div><span>role: </span>{{staff.role}}</div>
+  <div><span>Id: </span>{{staff.id}}</div>
+  <div><span>Role: </span>{{staff.role}}</div>
+  <div><span>Comment: </span>{{staff.comments}}</div>
+  <div><span>Points: </span>{{staff.points}}</div>
+  <div><span>Status: </span>{{staff.status}}</div>
+  <div><span>Email Address: </span>{{staff.email}}</div>
+  <div><span>Phone Number: </span>{{staff.phone}}</div>
   <div>
     <label>name:
       <input [(ngModel)]="staff.name" placeholder="name"/>

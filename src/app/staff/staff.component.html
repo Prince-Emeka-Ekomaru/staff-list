@@ -14,9 +14,12 @@
 <ul class="staff">
   <li *ngFor="let staff of staff">
     <a routerLink='/detail/{{staff.id}}'>
-    <span class="badge">{{staff.id}}</span> {{staff.name}}<!--<span> {{staff.role}}</span>-->
+    <span class="badge">{{staff.id}}</span> {{staff.name}}
+    <!-- <span> {{staff.role}}</span> {{staff.comments}}
+     <span> {{staff.points}}</span> <span>{{staff.status}}</span>
+     <span>{{staff.email}}</span><span>{{staff.phone}}</span> -->
     </a>
-    <button class="delete" title="delete staff" (click)="delete(staff)">X</button>
+    <button class="delete" title="delete staff" (click)="delete(staff)">Delete</button>
   </li>
 </ul>
 
